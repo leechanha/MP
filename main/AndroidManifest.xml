@@ -23,6 +23,7 @@
         <activity android:name=".Schedule"/>
         <activity android:name=".Page"/>
         <activity android:name=".Setting"/>
+        <activity android:name=".Survey"/>
     </application>
 
 </manifest>

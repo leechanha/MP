@@ -1,22 +1,33 @@
 package com.example.myapplication;
 import android.content.Intent;
-import android.net.Uri;
+import android.content.SharedPreferences;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout container;
+    public SharedPreferences first;
+    public Boolean checkF;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        first=getSharedPreferences("checkFirst",MODE_PRIVATE);
+        checkF=first.getBoolean("checkFirst",false);
+        if(checkF==false){
+            SharedPreferences.Editor editor = first.edit();
+            editor.putBoolean("checkFirst",true);
+            editor.commit();
+
+            Intent intent = new Intent(MainActivity.this, Survey.class);
+            startActivity(intent);
+        }
 
         ImageButton exer=(ImageButton)findViewById(R.id.main1);
         ImageButton sche=(ImageButton)findViewById(R.id.main2);
@@ -51,5 +62,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
+
 
