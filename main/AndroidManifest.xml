@@ -9,6 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".ExpertEx.ExpertEx6"></activity>
+        <activity android:name=".ExpertEx.ExpertEx5" />
+        <activity android:name=".ExpertEx.ExpertEx4" />
+        <activity android:name=".ExpertEx.ExpertEx3" />
+        <activity android:name=".ExpertEx.ExpertEx2" />
+        <activity android:name=".ExpertEx.ExpertEx1" />
+        <activity android:name=".IntermediateEx.IntermediateEx6" />
+        <activity android:name=".IntermediateEx.IntermediateEx5" />
+        <activity android:name=".IntermediateEx.IntermediateEx4" />
+        <activity android:name=".IntermediateEx.IntermediateEx3" />
+        <activity android:name=".IntermediateEx.IntermediateEx2" />
+        <activity android:name=".IntermediateEx.IntermediateEx1" />
+        <activity android:name=".BeginnerEx.BeginnerEx6" />
+        <activity android:name=".BeginnerEx.BeginnerEx5" />
+        <activity android:name=".BeginnerEx.BeginnerEx4" />
+        <activity android:name=".BeginnerEx.BeginnerEx3" />
+        <activity android:name=".BeginnerEx.BeginnerEx2" />
+        <activity android:name=".BeginnerEx.BeginnerEx1" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,14 +34,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Exercise"/>
-        <activity android:name=".Beginner"/>
-        <activity android:name=".Intermediate"/>
-        <activity android:name=".Expert"/>
-        <activity android:name=".Schedule"/>
-        <activity android:name=".Page"/>
-        <activity android:name=".Setting"/>
-        <activity android:name=".Survey"/>
+        <activity android:name=".Exercise" />
+        <activity android:name=".Beginner" />
+        <activity android:name=".Intermediate" />
+        <activity android:name=".Expert" />
+        <activity android:name=".Schedule" />
+        <activity android:name=".Page" />
+        <activity android:name=".Setting" />
+        <activity android:name=".Survey" />
     </application>
 
 </manifest>

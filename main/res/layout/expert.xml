@@ -18,7 +18,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
                 <ImageButton
-                    android:id="@+id/ex1"
+                    android:id="@+id/Eex1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
@@ -59,7 +59,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
                 <ImageButton
-                    android:id="@+id/ex2"
+                    android:id="@+id/Eex2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
@@ -106,7 +106,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
                 <ImageButton
-                    android:id="@+id/ex3"
+                    android:id="@+id/Eex3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
@@ -147,7 +147,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
                 <ImageButton
-                    android:id="@+id/ex4"
+                    android:id="@+id/Eex4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
@@ -194,7 +194,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
                 <ImageButton
-                    android:id="@+id/ex5"
+                    android:id="@+id/Eex5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
@@ -235,7 +235,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
                 <ImageButton
-                    android:id="@+id/ex6"
+                    android:id="@+id/Eex6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
@@ -270,7 +270,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/exeBack"
+        android:id="@+id/EexeBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
