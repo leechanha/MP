@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "96088614812",
+    "project_id": "mpterm",
+    "storage_bucket": "mpterm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96088614812:android:f6a4fded7cbb9f21a38a59",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96088614812-sf0q184a5c96e7809l3uec018sfmsl8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcEfxapGyH3e3j2M4n4Ggviei3q1HS72c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96088614812-sf0q184a5c96e7809l3uec018sfmsl8o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

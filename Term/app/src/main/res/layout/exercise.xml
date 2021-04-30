@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"><!--메인화면-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"><!--Beginner 영역-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"><!--beginner버튼 좌측 공란 1:1 비율-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"><!--beginner버튼 1:1 비율-->
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"><!--Frame 버튼과 텍스트 겹침-->
+                    <ImageButton
+                        android:id="@+id/beginner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/mainmenu" /><!--버튼 beginner-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Biginner"
+                            android:textColor="#000000"
+                            android:textSize="20dp" /><!--버튼 beginner 텍스트-->
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"><!--Intermediate 영역-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"><!--intermediate버튼 좌측 공란 1:1 비율-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"><!--intermediate버튼 1:1 비율-->
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"><!--Frame 버튼과 텍스트 겹침-->
+                    <ImageButton
+                        android:id="@+id/intermediate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/mainmenu" /><!--버튼 intermediate-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Intermediate"
+                            android:textColor="#000000"
+                            android:textSize="20dp" /><!--버튼 intermediate 텍스트-->
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"><!--Expert 영역-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"><!--expert버튼 좌측 공란 1:1 비율-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"><!--expert버튼 1:1 비율-->
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"><!--Frame 버튼과 텍스트 겹침-->
+                    <ImageButton
+                        android:id="@+id/expert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/mainmenu" /><!--버튼 expert-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expert"
+                            android:textColor="#000000"
+                            android:textSize="20dp" /><!--버튼 expert 텍스트-->
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/exeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Back"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+</LinearLayout>

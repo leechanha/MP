@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ages">
+        <item>-20</item>
+        <item>21-25</item>
+        <item>26-30</item>
+        <item>31-35</item>
+        <item>36-40</item>
+        <item>41-45</item>
+        <item>46-50</item>
+        <item>51-55</item>
+        <item>56-60</item>
+        <item>60-</item>
+    </string-array>
+    <string-array name="purpose">
+        <item>Diet</item>
+        <item>Weight Trainning</item>
+        <item>Normal</item>
+    </string-array>
+</resources>
