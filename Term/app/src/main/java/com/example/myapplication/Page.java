@@ -24,6 +24,7 @@ public class Page extends AppCompatActivity {
         Button reset=findViewById(R.id.reset);
         Button pgBack=(Button)findViewById(R.id.pgBack);
         Button join=(Button)findViewById(R.id.join);
+        Button login=(Button)findViewById(R.id.login);
 
         reset.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -44,6 +45,13 @@ public class Page extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(),JoinMembership.class);
+                startActivity(intent);
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener(){ //beginner버튼 새 페이지 열기 -> Beginner
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(),Login.class);
                 startActivity(intent);
             }
         });

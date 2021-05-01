@@ -40,32 +40,14 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="checkPassward"
-            />
-        <EditText
-            android:id="@+id/checkPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
-
-    </LinearLayout>
-
     <Button
-        android:id="@+id/joinMemb"
+        android:id="@+id/Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="join membership"/>
+        android:text="Login"/>
 
     <Button
-        android:id="@+id/joinBack"
+        android:id="@+id/LoginBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"

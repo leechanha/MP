@@ -17,34 +17,33 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class JoinMembership extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private static final String TAG = "SignUP";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join_membership);
+        setContentView(R.layout.activity_login);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        Button joinMemb = (Button) findViewById(R.id.joinMemb);
-        Button joinBack = (Button) findViewById(R.id.joinBack);
+        Button LoginMemb = (Button) findViewById(R.id.Login);
+        Button LoginBack = (Button) findViewById(R.id.LoginBack);
 
-        joinBack.setOnClickListener(new View.OnClickListener() {
+        LoginBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
 
-        joinMemb.setOnClickListener(new View.OnClickListener() {
+        LoginMemb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
-                    case R.id.joinMemb:
+                    case R.id.Login:
                         signUp();
                         break;
                 }
@@ -63,31 +62,24 @@ public class JoinMembership extends AppCompatActivity {
     private void signUp() {
         String email = ((EditText) findViewById(R.id.ID)).getText().toString();
         String password = ((EditText) findViewById(R.id.password)).getText().toString();
-        String checkPassword = ((EditText) findViewById(R.id.checkPassword)).getText().toString();
 
-        if (email.length() > 0 && password.length() > 0 && checkPassword.length() > 0) {
-            if (password.equals(checkPassword)) {
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-                                    startToast("회원가입에 성공하였습니다");
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                } else {
-                                    // If sign in fails, display a message to the user.
-                                    if (task.getException() != null) {
-                                        startToast(task.getException().toString());
-                                    }
-                                }
+        if (email.length() > 0 && password.length() > 0) {
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                startToast("로그인에 성공하였습니다");
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                startToast("로그인에 실패하였습니다");
                             }
-                        });
-            } else {
-                startToast("비밀번호가 일치하지 않습니다");
-            }
-        }
-        else{
+                        }
+                    });
+
+        } else {
             startToast("이메일 또는 비밀번호를 입력해 주세요");
         }
     }

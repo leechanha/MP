@@ -19,12 +19,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/join"
         android:text="join"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        //기타기능구현칸
-    </ScrollView>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"/>
 
     <Button
         android:id="@+id/pgBack"
