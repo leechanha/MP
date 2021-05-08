@@ -9,6 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,6 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Login extends AppCompatActivity {
 
@@ -71,6 +75,7 @@ public class Login extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 FirebaseUser user = mAuth.getCurrentUser();
+                                profileUpdate();
                                 startToast("로그인에 성공하였습니다");
                             } else {
                                 // If sign in fails, display a message to the user.
@@ -89,4 +94,20 @@ public class Login extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
+    private void profileUpdate() {
+/*        String sex = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.sex)).getCheckedRadioButtonId())).getText().toString();
+        String purpose = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.purpose)).getCheckedRadioButtonId())).getText().toString();
+        String week = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.week)).getCheckedRadioButtonId())).getText().toString();
+        String day = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.day)).getCheckedRadioButtonId())).getText().toString();
+        String pushup = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.pushup)).getCheckedRadioButtonId())).getText().toString();
+        String plan = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.plan)).getCheckedRadioButtonId())).getText().toString();
+        String exerthree = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.exerthree)).getCheckedRadioButtonId())).getText().toString();
+        이걸로하면 될줄알았는데 안돼요ㅠ*/
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        memberInfo memberInfo = new memberInfo("a", "b", "c", "d","e","f", "g");
+        db.collection("user").document(currentUser.getEmail()).set(memberInfo);
+    }
 }

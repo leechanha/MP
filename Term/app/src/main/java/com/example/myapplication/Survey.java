@@ -14,16 +14,19 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
-public class Survey extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+public class Survey extends AppCompatActivity {
 
     LinearLayout container;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.survey);
-        SharedPreferences servey=getSharedPreferences("servey",MODE_PRIVATE);
-        SharedPreferences.Editor editor=servey.edit();
+        SharedPreferences survey=getSharedPreferences("survey",MODE_PRIVATE);
+        SharedPreferences.Editor editor=survey.edit();
 
         RadioGroup sex;
         RadioButton sex1;
@@ -96,7 +99,6 @@ public class Survey extends AppCompatActivity {
         exerthree1=findViewById(R.id.exerthree1);
         exerthree2=findViewById(R.id.exerthree2);
         exerthree3=findViewById(R.id.exerthree3);
-
 
         submit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
