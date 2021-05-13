@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -95,19 +96,14 @@ public class Login extends AppCompatActivity {
     }
 
     private void profileUpdate() {
-/*        String sex = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.sex)).getCheckedRadioButtonId())).getText().toString();
-        String purpose = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.purpose)).getCheckedRadioButtonId())).getText().toString();
-        String week = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.week)).getCheckedRadioButtonId())).getText().toString();
-        String day = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.day)).getCheckedRadioButtonId())).getText().toString();
-        String pushup = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.pushup)).getCheckedRadioButtonId())).getText().toString();
-        String plan = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.plan)).getCheckedRadioButtonId())).getText().toString();
-        String exerthree = ((RadioButton) findViewById(((RadioGroup) findViewById(R.id.exerthree)).getCheckedRadioButtonId())).getText().toString();
-        이걸로하면 될줄알았는데 안돼요ㅠ*/
 
+        SharedPreferences survey = getSharedPreferences("survey", MODE_PRIVATE);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        memberInfo memberInfo = new memberInfo("a", "b", "c", "d","e","f", "g");
+        memberInfo memberInfo = new memberInfo(survey.getString("Sex", "none"), survey.getString("Purpose", "none"),
+                survey.getString("Week", "none"), survey.getString("Day", "none"),
+                survey.getString("Push-up", "none"), survey.getString("Plan", "none"), survey.getString("Big Three", "none"));
         db.collection("user").document(currentUser.getEmail()).set(memberInfo);
     }
 }
