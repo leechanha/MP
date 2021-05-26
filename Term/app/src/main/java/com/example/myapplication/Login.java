@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -67,6 +68,8 @@ public class Login extends AppCompatActivity {
     private void signUp() {
         String email = ((EditText) findViewById(R.id.ID)).getText().toString();
         String password = ((EditText) findViewById(R.id.password)).getText().toString();
+        SharedPreferences logstat = getSharedPreferences("Login", MODE_PRIVATE);
+        SharedPreferences.Editor logedit=logstat.edit();
 
         if (email.length() > 0 && password.length() > 0) {
             mAuth.signInWithEmailAndPassword(email, password)
@@ -78,6 +81,11 @@ public class Login extends AppCompatActivity {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 profileUpdate();
                                 startToast("로그인에 성공하였습니다");
+                                logedit.putBoolean("Login",true);
+                                logedit.commit();
+                                Intent intent = new Intent(getApplicationContext(), Page.class);
+                                startActivity(intent);
+                                finish();
                             } else {
                                 // If sign in fails, display a message to the user.
                                 startToast("로그인에 실패하였습니다");

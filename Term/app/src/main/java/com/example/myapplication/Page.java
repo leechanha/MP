@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import static android.view.View.GONE;
+
 
 public class Page extends AppCompatActivity {
     LinearLayout container;
@@ -27,7 +29,8 @@ public class Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page);
-
+        SharedPreferences logstat = getSharedPreferences("Login", MODE_PRIVATE);
+        SharedPreferences.Editor logedit=logstat.edit();
         MainActivity main = new MainActivity();
         SharedPreferences firstreset = getSharedPreferences("checkFirst", MODE_PRIVATE);
         Button reset = findViewById(R.id.reset);
@@ -36,6 +39,14 @@ public class Page extends AppCompatActivity {
         Button login = (Button) findViewById(R.id.login);
         Button logout = (Button) findViewById(R.id.logout);
 
+        if(logstat.getBoolean("Login",false)){
+            logout.setVisibility(View.VISIBLE);
+            login.setVisibility(GONE);
+        }
+        else{
+            logout.setVisibility(GONE);
+            login.setVisibility(View.VISIBLE);
+        }
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +69,7 @@ public class Page extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), JoinMembership.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -66,6 +78,7 @@ public class Page extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -76,7 +89,13 @@ public class Page extends AppCompatActivity {
                     case R.id.logout:
                         FirebaseAuth.getInstance().signOut();
                         Toast.makeText(getApplicationContext(), "로그아웃 되었습니다", Toast.LENGTH_SHORT).show();
-                        break;
+                        logout.setVisibility(GONE);
+                        login.setVisibility(View.VISIBLE);
+                        logedit.putBoolean("Login",false);
+                        logedit.commit();
+                        Intent intent = new Intent(getApplicationContext(), Page.class);
+                        startActivity(intent);
+                        finish();
                 }
             }
         });
