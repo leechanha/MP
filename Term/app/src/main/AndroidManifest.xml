@@ -31,6 +31,7 @@
         <activity android:name=".BeginnerEx.BeginnerEx3" />
         <activity android:name=".BeginnerEx.BeginnerEx2" />
         <activity android:name=".BeginnerEx.BeginnerEx1" />
+        <activity android:name=".recommand" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

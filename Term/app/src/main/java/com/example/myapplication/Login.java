@@ -82,6 +82,7 @@ public class Login extends AppCompatActivity {
                                 profileUpdate();
                                 startToast("로그인에 성공하였습니다");
                                 logedit.putBoolean("Login",true);
+                                logedit.putString("ID",email);
                                 logedit.commit();
                                 Intent intent = new Intent(getApplicationContext(), Page.class);
                                 startActivity(intent);

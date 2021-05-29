@@ -52,8 +52,14 @@ public class Page extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences.Editor editor = firstreset.edit();
                 main.checkF = false;
+                logedit.clear();
+                logedit.commit();
                 editor.clear();
                 editor.commit();
+                finishAffinity();
+                Intent intent = new Intent(Page.this, MainActivity.class);
+                startActivity(intent);
+                System.exit(0);
             }
         });
 
@@ -92,6 +98,7 @@ public class Page extends AppCompatActivity {
                         logout.setVisibility(GONE);
                         login.setVisibility(View.VISIBLE);
                         logedit.putBoolean("Login",false);
+                        logedit.putString("ID",null);
                         logedit.commit();
                         Intent intent = new Intent(getApplicationContext(), Page.class);
                         startActivity(intent);
