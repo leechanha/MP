@@ -95,7 +95,13 @@ public class MainActivity extends AppCompatActivity {
                     //컬렉션 아래에 있는 모든 정보를 가져온다.
                     for (QueryDocumentSnapshot document : task.getResult()) {
                         t[0]=0;
-                        Log.d("mytag1", document.getId());
+                        if (document.getId().equals(logstat.getString("ID", null))) {
+                            Log.d("mytag1", "You! : "+document.getId());
+                        }
+                        else{
+                            Log.d("mytag1", document.getId());
+                        }
+
                         if (!document.getId().equals(logstat.getString("ID", null))) {
                             if (survey.getString("Sex", "none").equals(document.getString("sex"))) {
                                 t[0] = (float) (t[0] + 0.06);
@@ -273,17 +279,17 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                     }
-                    Log.d("mytag1", String.valueOf(String.format("%.2f", recom[0])));
                     Log.d("mytag1", recom_id[0]);
+                    Log.d("mytag1", String.valueOf(String.format("%.2f", recom[0])));
+
                     //그렇지 않을때
                 } else {
 
                 }
             }
         });
-
-        logedit.putString("recom_id",recom_id[0]);
         logedit.putFloat("recom_score",recom[0]);
+        logedit.putString("recom_id",recom_id[0]);
         logedit.commit();
     }
 }
