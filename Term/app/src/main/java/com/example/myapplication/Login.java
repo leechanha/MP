@@ -10,6 +10,7 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -37,6 +38,7 @@ public class Login extends AppCompatActivity {
 
         Button LoginMemb = (Button) findViewById(R.id.Login);
         Button LoginBack = (Button) findViewById(R.id.LoginBack);
+        CheckBox store = (CheckBox) findViewById(R.id.store);
 
         LoginBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,10 +50,18 @@ public class Login extends AppCompatActivity {
         LoginMemb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.Login:
-                        signUp();
-                        break;
+                if (store.isChecked() == true) {
+                    switch (v.getId()) {
+                        case R.id.Login:
+                            signUp1();
+                            break;
+                    }
+                } else {
+                    switch (v.getId()) {
+                        case R.id.Login:
+                            signUp2();
+                            break;
+                    }
                 }
             }
         });
@@ -65,11 +75,11 @@ public class Login extends AppCompatActivity {
     }
 
 
-    private void signUp() {
+    private void signUp1() {
         String email = ((EditText) findViewById(R.id.ID)).getText().toString();
         String password = ((EditText) findViewById(R.id.password)).getText().toString();
         SharedPreferences logstat = getSharedPreferences("Login", MODE_PRIVATE);
-        SharedPreferences.Editor logedit=logstat.edit();
+        SharedPreferences.Editor logedit = logstat.edit();
 
         if (email.length() > 0 && password.length() > 0) {
             mAuth.signInWithEmailAndPassword(email, password)
@@ -81,8 +91,8 @@ public class Login extends AppCompatActivity {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 profileUpdate();
                                 startToast("로그인에 성공하였습니다");
-                                logedit.putBoolean("Login",true);
-                                logedit.putString("ID",email);
+                                logedit.putBoolean("Login", true);
+                                logedit.putString("ID", email);
                                 logedit.commit();
                                 Intent intent = new Intent(getApplicationContext(), Page.class);
                                 startActivity(intent);
@@ -98,6 +108,40 @@ public class Login extends AppCompatActivity {
             startToast("이메일 또는 비밀번호를 입력해 주세요");
         }
     }
+
+    private void signUp2() {
+        String email = ((EditText) findViewById(R.id.ID)).getText().toString();
+        String password = ((EditText) findViewById(R.id.password)).getText().toString();
+        SharedPreferences logstat = getSharedPreferences("Login", MODE_PRIVATE);
+        SharedPreferences.Editor logedit = logstat.edit();
+
+        if (email.length() > 0 && password.length() > 0) {
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                startToast("로그인에 성공하였습니다");
+                                logedit.putBoolean("Login", true);
+                                logedit.putString("ID", email);
+                                logedit.commit();
+                                Intent intent = new Intent(getApplicationContext(), Page.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                startToast("로그인에 실패하였습니다");
+                            }
+                        }
+                    });
+
+        } else {
+            startToast("이메일 또는 비밀번호를 입력해 주세요");
+        }
+    }
+
 
     //리스너에서는 토스트 사용안돼서 함수만들어서 썼어욤
     private void startToast(String msg) {

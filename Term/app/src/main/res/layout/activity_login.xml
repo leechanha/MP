@@ -40,6 +40,12 @@
 
     </LinearLayout>
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to save your survey?"
+        android:id="@+id/store"/>
+
     <Button
         android:id="@+id/Login"
         android:layout_width="wrap_content"
