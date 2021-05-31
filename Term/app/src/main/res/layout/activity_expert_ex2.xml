@@ -14,7 +14,26 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="팔굽혀펴기(난이도: 상): 높은 곳에 다리 올리고 팔 굽혀 펴기"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/footon_pushup" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":[운동 순서]\n1)발을 몸통의 높이보다 높은 곳에 걸어두거나 착지시킨다.\n2)발을 올려둘 높이는 개인의 체력이나 운동능력에 따라 조절하도록 합니다."/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

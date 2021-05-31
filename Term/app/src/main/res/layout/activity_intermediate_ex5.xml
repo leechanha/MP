@@ -14,7 +14,32 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="러시안 트위스트 (난이도: 하)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/russian_twist" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 옆구리와 허리, 외복사근에 영향을 주는 운동입니다.\n 난이도에 따라 중량과 짐볼 등 다양한 변형 동작을 가미시켜 운동이 가능합니다.\n
+탄탄한 복부를 원할 경우 효과가 큽니다.\n\n
+[운동 순서]\n
+1)바닥에 앉아 무릎을 구부리고 어깨너비만큼 다리를 벌린 후, 팔을 편 상태로 무릎 위에 올려놓습니다.\n
+2)상체를 뒤로 45도 정도 기울여 줍니다.\n
+3)몸통이 뒤틀리는 느낌으로 좌측으로 회전시킨후, 방향을 바꾸어 우측으로 회전시킵니다.\n
+4) 1)의 자세를 기본으로, 2)~3)의 동작을 반복합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

@@ -14,7 +14,26 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="풀업 (난이도: 상): 맨 몸 풀업"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pull_up" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":[운동 순서]\n1)풀업바를 어깨너비보다 넓게 잡고 다리를 지면에서 떨어지게 합니다.\n2)등을 조여 상체를 들어올려준다.\n3)등 근육의 긴장감을 유지한채 팔꿈치를 천천히 피며 등을 쭉 펴지게 해준다."/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

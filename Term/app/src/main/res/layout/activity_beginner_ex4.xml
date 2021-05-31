@@ -14,7 +14,33 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="콘센트레이션 컬 - 덤벨 (난이도: 하)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/concentration_curl" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":콘센트레이션 컬은 이두근을 집중하여 발달시켜주는 효과를 지닌 운동입니다.\n집중해서 천천히 수행하는 것이 중요한 포인트입니다.
+이두근의 봉우리를 높이 솟아오르게 하는 데 효과적입니다.\n즉, 흔히 말하는 알통이 위로 솟는 방향으로 발달시켜 줍니다.\n\n
+[운동 순서]\n
+1)벤치에 앉아 허리를 숙여 한 손으로 덤벨을 잡고 반대쪽 손은 무릎을 짚어줍니다.\n
+2)덤벨을 잡은 손의 팔꿈치를 대퇴부 안쪽으로 고정시켜줍니다.\n
+3)손목을 꺾지 말고, 곧게 편 상태로 덤벨을 손목 바깥쪽 방향으로 들어올려줍니다.\n
+4)천천히 저항을 느끼며 덤벨을 내려줍니다.\n
+5) 1)~2)의 자세를 기본으로 하며, 3)~4)의 과정을 반복하여 수행합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

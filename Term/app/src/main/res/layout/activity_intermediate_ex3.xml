@@ -14,7 +14,28 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="풀업(난이도: 중): 풀업밴드를 이용한 풀업"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/band_pullup" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":[운동 순서]\n1)풀업밴드를 친업바 가운데에 끼워 고정을 시켜준 뒤, 양 발을 밴드에 걸어 친업바를 어깨너비보다 넓게 잡아줍니다.\n
+2)등을 이용하여 상체를 위로 당기며 천천히 신전시켜 줍니다.
+※밴드의 탄성을 이용하여 비교적 쉽게 풀업을 할 수 있는 방법으로 등 근력에 따라 탄성이 강한 밴드부터 약한 밴드까지 다양하게 이용하여 진행하는 것이 좋습니다."/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

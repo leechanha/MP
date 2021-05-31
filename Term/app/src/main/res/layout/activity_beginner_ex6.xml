@@ -14,7 +14,32 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="레그프레스 (난이도: 하)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/leg_press" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":레그프레스는 대퇴사두근과 둔근의 크기에 도움이 되는 대표적인 하체 운동중 하나입니다.\n스쿼트에 비해 허리에 가해지는 부하가 적어, 비교적 무거운 무게로 운동을 할 수 있는 것이 장점입니다.\n\n
+[운동 순서]\n
+1)머신에 앉아 엉덩이와 어깨를 밀착시켜준 후, 허리는 아치형으로 만들어줍니다.\n
+2)양발을 발판에 대고 어깨너비만큼 벌린 후, 무릎을 펴줍니다.\n
+3)앉는다는 느낌으로 천천히 무릎이 90도가 될 때까지 구부려줍니다.\n
+4)발뒤꿈치로 민다는 느낌으로 허벅지에 힘을 주면서 무릎을 펴줍니다.\n
+5) 1)을 기본 자세로 하며, 2)~4)의 과정을 반복하여 수행합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

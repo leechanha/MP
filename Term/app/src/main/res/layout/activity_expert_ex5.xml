@@ -14,7 +14,32 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="V업 (난이도: 상)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/v_up" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":V업은 상하체를 동시에 들어올려야 하는 어려운 동작입니다.\n짧은 시간 안에 상복부와 하복부를 동시에 발달시키기에 복부 근육 전체에 있어 매우 효과적인 운동입니다.\n\n
+[운동 순서]\n
+1)바닥에 누운 자세에서 무릎 살짝 구부리고 팔을 가슴 앞으로 쭉 펴줍니다.\n
+2)상체와 다리가 V 모양이 되도록 상체를 일으켜 세워주며, 동시에 다리를 들어올려 줍니다. (이때, 팔은 다리와 평행이 되도록 뻗어줍니다.)\n
+3)등이 바닥과 약 45~60도가 되도록 유지한 채로 최고 지점에서 잠시 멈춰 줍니다.\n
+4)다시 천천히 시작 자세로 돌아옵니다.\n
+5) 1)을 기본 자세로 하여, 2)~4)의 동작을 반복합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

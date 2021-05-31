@@ -14,7 +14,30 @@
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="1">
-    //기타기능구현칸
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="풀업 (난이도: 하): 지면에 발을 대고하는 풀업"
+          android:textSize="16dp"
+          android:textColor="#0000ff"/>
+      <ImageView
+          android:id="@+id/imageView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/footon_pullup" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text=":[운동 순서]\n
+1)풀업바 가운데 벤치를 고정하고 손은 어깨너비보다 넓게 바를 잡아줍니다.\n
+2)벤치에 양발을 고정. 가슴을 피고 등을 조여줍니다.\n
+3)팔꿈치를 지면 방향으로 당긴다고 생각하며 이와 동시 발바닥으로 지면을 살짝 밀어주며 상체를 들어올려 줍니다.\n
+4)등의 충분한 수축감을 느꼈다면, 등의 긴장을 유지한 채 천천히 팔꿈치를 펴 등을 늘려줍니다.\n"/>
+     </LinearLayout>
   </ScrollView>
 
   <Button

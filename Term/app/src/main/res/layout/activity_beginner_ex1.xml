@@ -8,13 +8,40 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:textColor="#000000"
-        android:text="초급 상체"/>
+        android:text="초급 어깨"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="숄더프레스(머신) (난이도: 하)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shoulder_press" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":어깨의 삼각근에 도움이되는 운동입니다.
+                 \n초급자가 수행하기에 적절합니다. 45kg~75kg의 성인의 경우, 기본중량은 10kg가 적합하며 45kg 미만의 성인은 5kg을 기본중량으로 하고, 75kg 이상의 성인은 15kg 이상을 기본 중량으로 설정하는 것이 좋습니다. \n\n
+[운동 순서]\n
+1)의자의 높이는 손잡이가 어깨 위치에 오도록 조절합니다.\n
+2)엄지손가락을 걸쳐 그립을 잡습니다.\n
+3)바를 내릴 때 숨을 들이마시고, 바를 위로 놓을 때는 숨을 내뱉습니다.\n
+반복횟수는 10~12회를 1세트로 하여 3세트를 진행합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

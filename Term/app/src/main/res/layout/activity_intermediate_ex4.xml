@@ -14,7 +14,38 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="컬 프레스 - 덤벨 (난이도: 중)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView10_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dumbel_curl_press1" />
+            <ImageView
+                android:id="@+id/imageView10_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dumbel_curl_press2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":컬 프레스는 덤벨 컬과 숄더 프레스 운동을 결합한 운동입니다.\n상완과 어깨 근육이 함께 동원되어 이루어지는 복합적 운동입니다.\n
+이두근과 삼각근의 앞, 뒤, 측면을 동시에 발달시켜 줍니다.\n\n
+[운동 순서]\n
+1)어깨너비로 서서 덤벨을 양손으로 잡고, 손바닥이 앞쪽으로 향하게 한 후 몸통 옆에 위치시켜 줍니다.\n
+2)덤벨을 이두근의 힘으로 들어올려, 최대수축을 경험하고 연속하여 손목을 바깥 쪽 방향으로 비틀어 줍니다.\n
+3)머리 위로 덤벨을 들어올립니다.\n
+4)손바닥이 몸쪽을 향한 상태로 덤벨을 천천히 내려줍니다. 이 때, 어깨는 고정시키고 삼두근의 힘을 이용하여 이완시켜 줍니다.\n
+5) 1)의 자세를 기본으로 하며, 2)~4)의 과정을 반복하여 수행합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

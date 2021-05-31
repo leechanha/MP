@@ -8,13 +8,37 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:textColor="#000000"
-        android:text="고급 상체"/>
+        android:text="고급 어깨"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="사이드 래터럴 레이즈(바벨) (난이도: 상)"
+                android:textSize="16dp"/>
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/side_lateral_raise" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":어깨의 삼각근에 도움이되는 운동입니다.\n특히 측면삼각근의 발달이 두드러지는 효과를 보이며, 이에 따라 어깨가 넓어지게 되는 효과를 불러옵니다.\n만족하지 못하는 사이즈의 어깨 너비가 고민 사람들에게 매우 도움이 되는 운동입니다.\n부수적으로 전면 삼각근과 후면 삼각근까지 자극해줍니다.\n\n
+[운동 순서]\n
+1) 어깨너비로 다리를 벌리고 덤벨을 들어 손바닥이 몸 쪽을 향하게 하여 허벅지 옆 쪽에 위치시킵니다.\n
+2) 팔꿈치를 살짝 구부려 고정한 상태에서 전완이 어깨와 평행이 될 때까지 덤벨을 양옆으로 들어올려 줍니다.\n
+3) 저항을 느끼며 천천히 덤벨을 허벅지 옆쪽으로 내려줍니다.\n
+4) 1)의 자세를 유지한채, 2)~3)의 동작을 반복해 줍니다.\n
+※동작 마지막에 손목을 약간 비틀어주면 측면 삼각근 발달에 더욱 큰 효과를 가져옵니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

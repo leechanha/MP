@@ -14,7 +14,32 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="푸쉬업(난이도: 하): 높은곳에 손 올려놓고 팔굽혀펴기"
+            android:textSize="16dp"
+            android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/handon_pushup" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":일반적인 팔굽혀펴기보다 쉽게 할 수 있는 팔굽혀펴기 방식입니다.\n\n
+[운동 순서]\n
+1)양 손을 물체나 봉 등에 어깨너비 또는 그보다 조금 더 넓게 올려놓습니다.\n
+2)팔이 굽어지는 각도는 바닥과 90도(직각)에 가깝게 진행합니다.\n
+3)가슴은 최대한 물체 또는 봉 등 양손이 지탱하고 있는 그것과 가깝게 도착하는 것이 바람직합니다.\n
+4) 1)~3)을 신경 써서, 천천히 팔을 굽혀 가슴에 충분한 스트레칭을 느끼고 호흡을 내쉬며 시작자세로 돌어옵니다.\n
+5)시선은 너무 앞을 보려 하면 경추(목)에 부담을 주고 이는 곧 목의 통증으로 이어질 수 있으니, 시선은 자연스럽게 아래 바닥을 보고 진행하는 것이 바람직합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

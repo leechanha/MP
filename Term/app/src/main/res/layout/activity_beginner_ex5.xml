@@ -14,7 +14,34 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="크런치 (난이도: 하)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/crunch" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":크런치는 복부 윗부분을 단련시키는 기본적인 운동으로서, 상복부를 두껍게 만드는 운동입니다.\n
+몸을 완전히 들어올리지 않기 때문에 SIT-UP(윗몸일으키기)같은 운동에 비해 난이도가 쉽습니다.\n
+근육을 수축시키고 이완할 때 모두 복부에 긴장을 유지하는 것이 중요합니다.\n\n
+[운동 순서]\n
+1)바닥에 누워 무릎을 구부리고 발이 바닥과 떨어지지 않도록 합니다.\n
+2)양손을 귀에 대고 복부에 힘을 주면서 고개를 살짝 듭니다.\n
+3)어깨가 바닥에서 약 10cm 떨어지도록 등을 둥글게 구부리면서 상복부를 수축합니다.\n
+4)상복부의 긴장을 느껴가며 천천히 몸통을 바닥에 눕힙니다. 이 때, 머리가 완전히 바닥에 닿지 않도록 신경써 줍니다.\n
+5) 3)~4)의 과정을 반복해 줍니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

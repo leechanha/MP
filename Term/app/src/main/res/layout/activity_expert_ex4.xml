@@ -14,7 +14,33 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="라잉 덤벨 (난이도: 상)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lying_dumbel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":팔 뒤쪽 삼두근을 탄력 있게 해주는 운동입니다.\n상완삼두근의 전체적인 근매스 증대에 효과적입니다.\n
+팔꿈치의 각도를 조금씩 다르게 해서 삼두근의 수축되는 지점을 찾는 것이 중요합니다.\n
+[운동 순서]\n\n
+1)벤치에 앉은 자세에서 양손에 든 덤벨을 손바닥이 마주 보게끔 잡은 후에 벤치에 눕습니다.\n
+2)팔꿈치를 가슴 위쪽으로 쭉 펴줍니다.\n
+3)정수리 위로 포물선을 그리면서 천천히 팔꿈치를 구부려 덤벨을 내려줍니다.\n
+4)손의 힘이 아닌 삼두근의 힘으로 팔과 몸이 수직이 되도록 얼굴 위까지 팔꿈치를 펴줍니다.\n
+5) 1)~2)의 자세를 기본으로 하며, 3)~4)의 과정을 반복하여 수행합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button

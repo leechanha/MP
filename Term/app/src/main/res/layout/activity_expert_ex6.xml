@@ -14,7 +14,34 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        //기타기능구현칸
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="점프 스쿼트 (난이도: 상)"
+                android:textSize="16dp"
+                android:textColor="#0000ff"/>
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jump_squart" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":점프스쿼트는 본인의 체중으로 하는 하체 근력 운동입니다.\n
+하체의 체지방을 효과적으로 연소시키고, 탄력을 향상시키는데 매우 효과적입니다.\n
+지속적으로 실시하면 탄력 있는 다리 라인을 만들고, 심폐 기능 강화에도 도움이 됩니다.\n\n
+[운동 순서]\n
+1)다리를 어깨너비로 벌립니다.\n
+2)스쿼트 착지 자세를 만들고 손을 앞으로 뻗어줍니다.\n
+3)다리에 힘을 주며 위로 쭉 점프하며 뛰어오릅니다.\n
+4)쿵 소리가 나지 않게 천천히 가볍게 떨어집니다.\n
+5) 1)~2)의 자세를 기본으로 하며, 3)~4)의 과정을 반복하여 수행합니다.\n"/>
+        </LinearLayout>
     </ScrollView>
 
     <Button
