@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         ImageButton exer=(ImageButton)findViewById(R.id.main1);
         ImageButton sche=(ImageButton)findViewById(R.id.main2);
         ImageButton page=(ImageButton)findViewById(R.id.main3);
-        ImageButton set=(ImageButton)findViewById(R.id.main4);
         exer.setOnClickListener(new View.OnClickListener(){ //main1버튼 새 페이지 열기 -> Exercise
             @Override
             public void onClick(View view){
@@ -66,13 +65,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(),Page.class);
-                startActivity(intent);
-            }
-        });
-        set.setOnClickListener(new View.OnClickListener(){ //main4버튼 새 페이지 열기 -> App Setting
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(),Setting.class);
                 startActivity(intent);
             }
         });
